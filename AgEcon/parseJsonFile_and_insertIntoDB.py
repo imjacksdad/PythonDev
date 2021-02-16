@@ -10,7 +10,7 @@ def insert_data():
     t1 = datetime.now()
 
     #set location of directory to look for files.
-    location = 'C:/Python39/DEVFiles/PythonDev/AgEcon/'
+    location = 'C:/Python39/DEVFiles/PythonDev/AgEcon'
 
     conn = pyodbc.connect('Driver={SQL Server};'
                           'Server=TEDSQL050;'
