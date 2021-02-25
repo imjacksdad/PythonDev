@@ -20,14 +20,18 @@ conn = pyodbc.connect('Driver={SQL Server};'
                       'Driver={ODBC Driver 17 for SQL Server};')
 cursor = conn.cursor()
 
-keyword = 'invticket'
+inv_keyword = 'invticket'
+broker_keyword = 'BrokerFeeVouch'
+dray_keyword = 'DrayageVouch'
+lab_keyword = 'LabFeeVouch'
+ocean-keyword = 'OceanFrtVouch'
 
 #Loop through directory
 for file in os.listdir(location):
     #look for only CSV files
     #if file.endswith(".csv"):
         #if substring in file:
-        if keyword in file:
+        if inv_keyword in file:
             #Open the file
             with open(os.path.join(location, file)) as csv_file:
                     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -69,3 +73,19 @@ for file in os.listdir(location):
                             print()
                             print()
                             line_count += 1
+
+        elif broker_keyword in file:
+
+
+        elif dray_keyword in file:
+
+
+
+        elif lab_keyword in file:
+
+
+
+        elif ocean-keyword in file:
+
+
+
