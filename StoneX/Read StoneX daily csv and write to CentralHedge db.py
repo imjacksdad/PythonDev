@@ -3,8 +3,8 @@ import csv
 import pyodbc
 from datetime import date
 
-location = '\\\\tedfil01\\InformaticaDEV\\Process\\StoneX\\'
-substring = 'GAVPOS_20201215_221233.csv'
+location = '\\\\tedfil01\\InformaticaDEV\\Process\\Position\\StoneX\\'
+substring = 'GAVPOS_20210303_EOD.csv'
 
 # Get today's date 
 today = date.today()
