@@ -1,8 +1,8 @@
 import csv
 
-path = 'C:\Python39\TestFiles\\'
+path = 'C:\Python39\DEVFiles\PythonDev\Support Files\\'
 
-with open(path + '20201204105031_invticket_1189.csv') as csv_file:
+with open(path + 'GAVPOS.csv') as csv_file:
     #dialect = csv.Sniffer().sniff(csv_file.read(1024))
     #csv_file.seek(0)
     #reader = csv.reader(csv_file, dialect)
@@ -15,11 +15,14 @@ with open(path + '20201204105031_invticket_1189.csv') as csv_file:
         if line_count == 0:
             print(f'Column names are {", ".join(row)}')
             line_count += 1
-        elif {row[0]} == "ooking Number":
+        elif {row[0]} == "PRECID":
             print('nothing here')
             line_count -= 1
         else:
-            print(f'\t{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]},')
+            print(f'\t{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]}, {row[65]},,')
+            row.append("I")
+            print(row)
+
             line_count += 1
 
         #INSERT UPDATE FOR EACH FIELD WHERE BOOKING NUMBER = {row[1]}

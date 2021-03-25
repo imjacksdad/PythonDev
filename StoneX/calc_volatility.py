@@ -4,11 +4,11 @@
 # Contract # = '1C08 DUYD0
 import mibian
 
-c = mibian.BS([5.34, 5.6, 0, 64], callPrice= .19)
+c = mibian.BS([5.49500000, 5.60000000, 0, 64], callPrice= .19)
 print('Call Vol: ' + str(c.impliedVolatility))
 print()
 
-p = mibian.BS([5.34, 5.6, 0, 64], callPrice= .19)
+p = mibian.BS([5.49500000, 5.60000000, 0, 64], callPrice= .19)
 print('Put Vol: ' + str(p.impliedVolatility))
 print()      
 
