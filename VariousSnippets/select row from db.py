@@ -3,13 +3,13 @@ import pyodbc
 
 #Create database connection
 conn = pyodbc.connect('Driver={SQL Server};'
-                      'Server=tepdagagr01;'
-                      'Database=AgrisExtension;'
+                      'Server=tepsql050;'
+                      'Database=Filebound;'
                       'Trusted_Connection=yes;')
 #try:
 cursor = conn.cursor()
 
-cursor.execute('SELECT top 100 * FROM [AgrisExtension].[Agris].[B01_TRANS]')
+cursor.execute('SELECT top 100 * FROM [FileBound].[dbo].[Files]')
 
 #sql_select_Query = "SELECT * FROM [AgrisExtension].[Agris].[B01_TRANS]"
 ##for row in cursor:
@@ -21,29 +21,44 @@ records = cursor.fetchall()
 print("Total number of rows is: ", cursor.rowcount)
 
 print("\nPrinting each record")
-for row in records:
+for column in records:
     print("===========NEW RECORD===========")
-    print("BookingNumber = ", row[0], )
-    print("NetWeight = ", row[1])
-    print("SupplierSourceCustomerId  = ", row[2])
-    print("BsmSupplierProfileId  = ", row[3])
-    print("BuyerSourceCustomerId  = ", row[4])
-    print("BsmBuyerProfileId  = ", row[5])
-    print("InternalSalesContract  = ", row[6])
-    print("SaleContract  = ", row[7])
-    print("BsmOrderId  = ", row[8])
-    print("OBD  = ", row[9])
-    print("DestinationPortCode  = ", row[10])
-    print("DestinationPortName  = ", row[11])
-    print("Commodity  = ", row[12])
-    print("BrokerSourceCustomerId  = ", row[13])
-    print("BsmBrokerProfileId  = ", row[14])
-    print("CostIndex  = ", row[15])
-    print("BrokerTotalFee  = ", row[16])
-    print("Location  = ", row[17])
-    print("Source  = ", row[18])
-    print("SubSource  = ", row[19])
-    print("FileDate  = ", row[20], "\n")
+    print("FileID = ", column[0], )
+    print("ProjectID = ", column[1], )
+    print("Status = ", column[2], )
+    print("Notes = ", column[3], )
+    print("DateChanged = ", column[4], )
+    print("Destruction = ", column[5], )
+    print("Field1 = ", column[6], )
+    print("Field2 = ", column[7], )
+    print("Field3 = ", column[8], )
+    print("Field4 = ", column[9], )
+    print("Field5 = ", column[10], )
+    print("Field6 = ", column[11], )
+    print("Field7 = ", column[12], )
+    print("Field8 = ", column[13], )
+    print("Field9 = ", column[14], )
+    print("Field10 = ", column[15], )
+    print("DateCreated = ", column[16], )
+    print("DateStarted = ", column[17], )
+    print("ChangedBy = ", column[18], )
+    print("LabelPrinted = ", column[19], )
+    print("UpdateFieldValueOld = ", column[20], )
+    print("CheckDone = ", column[21], )
+    print("BoxID = ", column[22], )
+    print("Field11 = ", column[23], )
+    print("Field12 = ", column[24], )
+    print("Field13 = ", column[25], )
+    print("Field14 = ", column[26], )
+    print("Field15 = ", column[27], )
+    print("Field16 = ", column[28], )
+    print("Field17 = ", column[29], )
+    print("Field18 = ", column[3], )
+    print("Field19 = ", column[31], )
+    print("Field20 = ", column[32], )
+    print("FilePtr = ", column[33], )
+    print("RemoteID = ", column[34], )
+    print("Locked = ", column[35], "\n")
 
 ##    sql_delete_query = """Delete from PackingList where BookingNumber = ?""" 
 ##    val = row[0]
@@ -52,8 +67,8 @@ for row in records:
 ##    conn.commit()
 ##    print('Records deleted')
 ##    
-##    sql_insert_query = "INSERT INTO PackingList (BookingNumber ,SupplierSourceCustomerId ,BsmSupplierProfileId ,BuyerSourceCustomerId, BsmBuyerProfileId, SaleContract, BsmOrderId, OBD, DestinationPortCode, DestinationPortName, Commodity, Location, Source, Subsource) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
-##    val=[row[0],row[2],row[3],row[4],row[5],row[7],row[8],row[9],row[10],row[11],row[12],row[17],row[18], row[19]]
+##    sql_insert_query = "INSERT INTO PackingList ([FileID],[ProjectID],[Status],[Notes],[DateChanged],[Destruction],[Field1],[Field2],[Field3],[Field4],[Field5],[Field6],[Field7],[Field8],[Field9],[Field10],[DateCreated],[DateStarted],[ChangedBy],[LabelPrinted],[UpdateFieldValueOld],[CheckDone],[BoxID],[Field11],[Field12],[Field13],[Field14],[Field15],[Field16],[Field17],[Field18],[Field19],[Field20],[FilePtr],[RemoteID],[Locked]) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+##    val=[column[0],column[2],column[3],column[4],column[5],column[7],column[8],column[9],column[10],column[11],column[12],column[17],column[18], column[19], column[20], column[21], column[22], column[23], column[24], column[25], column[26], column[27], column[28], column[29], column[30], column[31], column[32], column[33], column[34], column[35]]
 ##    print(sql_insert_query, val)        
 ##    cursor.execute(sql_insert_query, val)
 ##    conn.commit()
