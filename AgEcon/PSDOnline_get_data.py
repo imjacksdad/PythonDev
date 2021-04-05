@@ -25,4 +25,3 @@ for c in commodities:
             print(str(c) + " for " + str(y) + " has beend downloaded.")
         except ValueError:
             print("Oops!  " + str(c) + " for " + str(y) + " returns no data.  Try again...")
-
