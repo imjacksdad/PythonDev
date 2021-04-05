@@ -43,7 +43,7 @@ def ftp_get_file(fname):
             print ("Error: File could not be downloaded " + file)
 
         print('Moving ' + file + ' to \\tedfil01\InformaticaDEV\Process\Position\StoneX')
-        shutil.move(file, '\\\\tedfil01\\InformaticaDEV\\Process\\Position\\StoneX\\' + file)
+        shutil.move(file, '\\\\tedfil01\\InformaticaDEV\\Archive\\Position\\StoneX\\' + file)
         #ftp.delete(file)
         #ftp.delete('MONEYFILE.csv')
         print("File Moved")   

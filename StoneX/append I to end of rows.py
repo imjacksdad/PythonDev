@@ -1,6 +1,6 @@
 import csv
 
-path = 'C:\Python39\DEVFiles\PythonDev\Support Files\\'
+path = '\\\\tedfil01\\InformaticaDEV\\Process\\Position\\StoneX\\'
 
 with open(path + 'GAVPOS.csv') as csv_file:
     #dialect = csv.Sniffer().sniff(csv_file.read(1024))
@@ -9,19 +9,19 @@ with open(path + 'GAVPOS.csv') as csv_file:
 
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
-
     #BEGIN FOR
     for row in csv_reader:
         if line_count == 0:
-            print(f'Column names are {", ".join(row)}')
+            #print(f'Column names are {", ".join(row)}')
             line_count += 1
         elif {row[0]} == "PRECID":
             print('nothing here')
             line_count -= 1
         else:
-            print(f'\t{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]}, {row[65]},,')
+            #print(f'\t{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]}, {row[65]},,')
             row.append("I")
-            print(row)
+            #print(f'\t{row[0]}, {row[1]}, {row[2]}, {row[3]}, {row[4]}, {row[5]}, {row[66]},,')
+            #print(row)
 
             line_count += 1
 
