@@ -1,15 +1,15 @@
+
 import numpy as np
 import pylab as plt
 
 # Let's create an arbitrary price series from normally distributed random numbers. 
 # Of course, you can replace this with your downloaded historical data. 
 np.random.seed(28)
-N = 300
+N = 200
 rets = np.random.randn(N)
 prices = np.cumsum(rets)+10
 plt.plot(prices);
 plt.ylabel('Prices');
-
 
 # Current position. '0': not in position. '1': in long position. '-1': in short position
 inpos = 0
@@ -67,7 +67,6 @@ unrlzd = np.cumsum(np.multiply(np.diff(px), pos[1:]))
 # Compare the final realised and the final unrealised PnL:
 final_unrlzd = unrlzd[-1]
 print(final_unrlzd, sum(rlzd))
-#24.281491112572287 25.16798661594224
 
 # Compare the realised and unrealised PnLs:
 plt.plot(np.array(t)-max(MA)-2, np.cumsum(rlzd), '-o')
@@ -78,3 +77,4 @@ plt.legend(['realised', 'unrealised']);
 # To zoom in:
 #plt.xlim([20,50])
 #plt.ylim([-15,-5])
+
