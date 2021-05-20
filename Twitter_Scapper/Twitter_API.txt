@@ -1,10 +1,15 @@
-API key
-Zq9M9ZTKe0rSj0abvOmn09QCh
+#For security, this will be the last time we’ll display these.
+#If something happens, you can always regenerate them.
 
-API secret key
-BpZwsrpMH3agPsYpthsnxIAFcGfXFEUlwzuSGVP0fgO4h8C9KB
+#Access Token:
+#2416133377-lebxYOI7QQaEYVTMKPGeh5Llr6rEeZ6p7b4DLtf
 
-Bearer token
-AAAAAAAAAAAAAAAAAAAAAHajNgEAAAAA8%2FkTMRvdZKAiHJ%2FT77lgwo3alx0%3DaxksJNc7t54lVhM2bUhY0wRcxTE7MmS4uzFcKUrKSB0YBQpF6N
+#Access Token Secret:
+#TkhDh7W3hIFgpIL0QXdmplNDZguBKq3H9oVFjVeMRI3PZ
 
 
+#API Key:
+#N01MEjB95ekP0tGL88XjdPO0X
+
+#API Secret Key:
+#8Jt4hIV66Eud07C02IVvP0tFCw8hQ5R83kODhptrOZFQbs0GWX
