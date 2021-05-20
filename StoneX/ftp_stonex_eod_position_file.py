@@ -29,7 +29,7 @@ def ftp_get_file():
     print("StoneX's Date Yesterday = ", stonex_ydate)
 
     #Set the name of the file including the date (today or yesterday)
-    fname = "PRELIM_" + stonex_tdate
+    fname = "GAVPOS_" + stonex_ydate
     file = fname
 
     print("File we're looking for is: ", file)
@@ -59,5 +59,10 @@ def ftp_get_file():
     ftps.quit()
 
 ftp_get_file()
+
+#if exists, delete the gavpos file
+shutil.copy('GAVPOS_20210519_EOD.csv', 'C:\\Python39\\DEVFiles\\PythonDev\\Support Files\\GAVPOS.csv') # complete target filename given
+#if exists in new dir, then print("File Copied.")
+#else print("Something went wrong")
 
 
