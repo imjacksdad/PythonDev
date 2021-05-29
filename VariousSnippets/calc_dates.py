@@ -19,13 +19,13 @@ def calc_dates(d):
     print("Today is: %s" % today)
     #Today is: 2003-10-11
 
-    print("Year with next Aug 13th on a Friday is: %s" % year)
+    #print("Year with next Aug 13th on a Friday is: %s" % year)
     #Year with next Aug 13th on a Friday is: 2004
 
-    print("How far is the Easter of that year: %s" % rdelta)
+    #print("How far is the Easter of that year: %s" % rdelta)
     #How far is the Easter of that year: relativedelta(months=+6)
 
-    print("And the Easter of that year is: %s" % (today+rdelta))
+    #print("And the Easter of that year is: %s" % (today+rdelta))
     #And the Easter of that year is: 2004-04-11
 
     print("And yesterday's date was: %s" % yesterday)

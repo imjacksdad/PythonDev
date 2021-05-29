@@ -16,7 +16,7 @@ d2 = today.strftime("%B %d, %Y")
 print("d2 =", d2)
 
 # mm/dd/y
-d3 = today.strftime("%m/%d/%y")  #05/18/21
+d3 = today.strftime("%m,%d,%y")  #05/18/21 or 05,26,2021
 print("d3 =", d3)
 
 # Month abbreviation, day and year	
