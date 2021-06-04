@@ -29,7 +29,8 @@ def ftp_get_file():
     print("StoneX's Date Yesterday = ", stonex_ydate)
 
     #Set the name of the file including the date (today or yesterday)
-    fname = "PRELIM_" + stonex_tdate
+    #fname = "PRELIM_" + stonex_tdate  ##Today's File
+    fname = "PRELIM_" + stonex_ydate  ##Yesterday's File
     file = fname
 
     print("File we're looking for is: ", file)
