@@ -1,6 +1,6 @@
 import csv
 
-path = 'C:\Python39\TestFiles\\'
+path = 'C:\Python39\PythonDev\Support Files\\'
 #filename = '20201204105031_invticket_1189.csv'
 filename = 'GAVPOS.csv'
 d = ','

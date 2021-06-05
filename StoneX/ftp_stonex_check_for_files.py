@@ -22,8 +22,8 @@ for file in files:
     try:
         print("Found..." + file)
         fn += 1
-        ftps.retrbinary("RETR " + file ,open(file, 'wb').write)
-        ftp_get_file(file)
+        #ftps.retrbinary("RETR " + file ,open(file, 'wb').write)
+        #ftp_get_file(file)
     except:
         print ("Error: File could not be downloaded or found " + file)
 

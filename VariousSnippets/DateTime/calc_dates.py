@@ -31,7 +31,8 @@ def calc_dates(d):
     print("And yesterday's date was: %s" % yesterday)
 
 if __name__ == '__main__':
-#    # test1.py executed as script
-#    # do something
+#   # get_date.py executed as script
+#   # do something
+    #d = "Sat Oct 11 17:13:46 UTC 2003"
     calc_dates(d)
 
