@@ -3,12 +3,14 @@ import csv
 import pyodbc
 from datetime import date
 
-location = '\\\\tedfil01\\InformaticaDEV\\Process\\Position\\StoneX\\'
-substring = 'GAVPOS_20210303_EOD.csv'
+#location = '\\\\tedfil01\\InformaticaDEV\\Process\\Position\\StoneX\\'
+location = 'C:\\Python39\\DEVFiles\\PythonDev\\Support Files'
+substring = 'GAVPOS.csv'
 
 # Get today's date 
 today = date.today()
-print(today)
+print(today)    #2021-05-20
+
 #Create database connection
 conn = pyodbc.connect('Driver={SQL Server};'
                       'Server=TEDSQL050;'
@@ -76,3 +78,6 @@ for file in os.listdir(location):
                             conn.commit()
                             print('Record inserted')
                             line_count += 1
+
+    #else:
+        #print("No file found.")
