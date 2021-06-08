@@ -43,9 +43,9 @@ except(requests.exceptions.MissingSchema, requests.exceptions.ConnectionError, r
     strip_base = base.replace('www.', '')
     base_url = '{0.scheme}://{0.netloc}'.format(parts)
     path = url[:url.rfind('/')+1]
-    if '/' in parts.path:
-        #do nothing
-    else url
+        if '/' in parts.path:
+            #do nothing
+        else url
 
 soup = BeautifulSoup(response.text, 'lxml')
 
