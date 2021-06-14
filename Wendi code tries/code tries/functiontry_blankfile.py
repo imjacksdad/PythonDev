@@ -1,4 +1,3 @@
-
 from bs4 import BeautifulSoup
 import requests
 import csv
@@ -6,20 +5,24 @@ import re
 from urllib.request import urlopen
 
 url = urlopen("https://www.census.gov/programs-surveys/popest.html")
-soup = BeautifulSoup(url)
+soup = BeautifulSoup(url,features="lxml")
+   
 linklist = []
-with open("CensusTask_whatsthis1.csv","w+",newline="") as f:
-        
-    cwf=csv.writer(f)
-    for link in soup.findAll('a', attrs={'href': re.compile("^http")}):
-        def filterunique(link):
-            linklist = []
-            for x in link:
-                if x not in linklist:
-                    linklist.append(x)
 
-    for x in linklist:
-        cw.writerow([link.get('href')])                  
+for link in soup.findAll('a', attrs={'href': re.compile("^http")}):
+    if link not in linklist:
+        linklist.append(link.get('href'))
 
-        
+    setoflinks = set(linklist)
+    #sorted(setoflinks)
+
+f = open("demofile3.txt", "a")
+
+for link in setoflinks:
+    print(link)
+    f.write(link)
+    f.write('\n')
+
 f.close()
+   
+
