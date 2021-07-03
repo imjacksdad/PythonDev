@@ -46,7 +46,7 @@ def ftp_get_file():
         if file.startswith(fname):
             try:
                 print("Downloading..." + file)
-                ftps.retrbinary("RETR " + file ,open(file, 'wb').write)
+                #ftps.retrbinary("RETR " + file ,open(file, 'wb').write)
             except:
                 print ("Error: File could not be downloaded " + file)
 

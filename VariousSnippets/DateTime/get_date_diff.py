@@ -24,6 +24,7 @@ def main(d2):
     result1 = diff_dates(d2, d1)
     print('{} days between {} and {}'.format(result1, d1, d2))
 
+diff_dates(2020-1-1, 2021-1-1)
 main(2021-1-1)
 
 
