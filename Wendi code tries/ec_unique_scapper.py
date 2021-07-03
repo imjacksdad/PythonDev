@@ -5,7 +5,7 @@ from urllib.parse import urlsplit
 from urllib.parse import urlparse
 from collections import deque
 
-url = 'https://scrapethissite.com'
+url = 'https://www.census.gov/programs-surveys/popes'
 
 # a queue of urls to be crawled next
 new_urls = deque([url])
@@ -37,15 +37,15 @@ except(requests.exceptions.MissingSchema, requests.exceptions.ConnectionError, r
     broken_urls.add(url)
     continue
 
-    # extract base url to resolve relative links
-    parts = urlsplit(url)
-    base = '{0.netloc}'.format(parts)
-    strip_base = base.replace('www.', '')
-    base_url = '{0.scheme}://{0.netloc}'.format(parts)
-    path = url[:url.rfind('/')+1]
-        if '/' in parts.path:
-            #do nothing
-        else url
+# extract base url to resolve relative links
+parts = urlsplit(url)
+base = '{0.netloc}'.format(parts)
+strip_base = base.replace('www.', '')
+base_url = '{0.scheme}://{0.netloc}'.format(parts)
+path = url[:url.rfind('/')+1]
+if '/' in parts.path:
+        #do nothing
+    else url
 
 soup = BeautifulSoup(response.text, 'lxml')
 
