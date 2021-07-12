@@ -8,7 +8,7 @@ now = datetime.now()
 current_time = now.strftime("%H:%M:%S")
 print("Current Time =", current_time)
 
-while current_time < '09:43:00':   #set this to your stop time.
+while current_time > '09:43:00':   #set this to your stop time.
     pyautogui.moveTo(100, 100, duration = 1)
     pyautogui.moveTo(100, 200, duration = 1)
     pyautogui.moveTo(200, 200, duration = 1)
