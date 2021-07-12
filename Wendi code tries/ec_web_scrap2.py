@@ -11,11 +11,11 @@ soup= BeautifulSoup(r.content, "html.parser")
 results =  soup.find_all("a")
 
 for link in results:
-    link.get("href")       
+    link.get("href")
 
 def unique_urls(tags,url):
-    #cleaned_urls = set()
-    list_of_urls = ['url_1', 'url_1', 'url_2', 'url_1', 'url_1', 'url_2', 'url_3', 'url_3'] 
+    cleaned_urls = set()
+    list_of_urls = ['url_1', 'url_1', 'url_2', 'url_1', 'url_1', 'url_2', 'url_3', 'url_3']
     set_of_urls = set(list_of_urls) # return : {'url_1', 'url_2', 'url_3'}
     list_clean = list(set_of_urls) # return :['url_3', 'url_1', 'url_2']
     for link in results:
