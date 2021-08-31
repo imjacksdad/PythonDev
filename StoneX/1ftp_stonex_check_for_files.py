@@ -3,7 +3,7 @@ from ftplib import FTP
 #from datetime import timedelta
 #import time
 #import shutil
-from email_stonex_file_found import send_email
+#from email_stonex_file_found import send_email
 from ftp_stonex import ftp_get_file
 
 

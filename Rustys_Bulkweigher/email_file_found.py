@@ -21,7 +21,7 @@ def send_email(send_from, send_to):
     msg = email.message.Message()
     msg['From'] = send_from
     msg['To'] = send_to
-    msg['Subject'] = "Python E-mail Subject"
+    msg['Subject'] = "Python E-mail Subject-BSM"
     msg.add_header('Content-Type', 'text')
     msg.set_payload("This message brought to you by Python and Eric. \n \n We can now use python to send email notifications.")
 
@@ -29,4 +29,5 @@ def send_email(send_from, send_to):
     smtp_obj.sendmail(msg['From'], [msg['To']], msg.as_string())
     smtp_obj.quit()
 
-send_email("eric.carstensen@gavilon.com", "imjacksdad@gmail.com,")
+send_email("eric.carstensen@gavilon.com", "eric.carstensen@gavilon.com")
+
