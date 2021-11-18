@@ -1,7 +1,7 @@
 import os
 import csv
 
-location = 'C:/Python39/DEVFiles/PythonDev/Support Files/'
+location = 'C:/Python39/DEVFiles/PythonDev/Support Files/BSM/'
 
 
 #Loop through directory
@@ -29,7 +29,7 @@ for file in os.listdir(location):
                 #END READER
                         
 #print((file))
-#print()
+print()
 #print(os.path.join(location, file))
 
 

@@ -1,7 +1,7 @@
 import os
 import csv
 
-location = 'C:/Python39/TestFiles/'
+location = 'C:/Python39/DEVFiles/PythonDev/Support Files/BSM/'
 
 files_in_dir = []
 
