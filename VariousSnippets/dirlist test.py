@@ -3,7 +3,6 @@ from datetime import datetime
 import time
 import shutil
 import stat
-import win32con, win32api
 
 # Getting the current work directory (cwd)
 path = os.getcwd()
@@ -18,19 +17,18 @@ for r, d, f in os.walk(path):
 
             # Both the variables would contain time 
             # elapsed since EPOCH in float
-            ti_c = os.path.getctime(path)
+            ti_c = os.path.getctime(file)
             
             #convert float to readable date
             cleantime = datetime.fromtimestamp(ti_c).strftime('%Y-%m-%d')
 
             #print the directory that is being created
             print(cleantime)
+            print (file)
 
             #Create dir if not exists
-            os.makedirs(cleantime, exist_ok=True)
-
-            #make dir read/write
-            os.chmod(cleantime, stat.S_IWRITE )
+            path.exists(cleantime)
+            os.mkdir(cleantime, mode = 0o666)
                        
             #Copy the file to the new dir
             print(f"Moving {file} to {cleantime}")
@@ -38,7 +36,4 @@ for r, d, f in os.walk(path):
             
             #print(os.path.join(r, file))
             #print(file)
-
-            #print(f"{file} was created at {cleantime}")
-                  #and was last modified at {ti_m}")
-
+            
