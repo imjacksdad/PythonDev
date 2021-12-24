@@ -1,10 +1,10 @@
 ##syntax to write the function to calculate implied volatility for Call Option and Put Option would be —
 ##mibian.BS([Underlying Price, Call / Price Strike Price, Interest Rate, Days To Expiration], Call / Put Price)
 
-# Contract # = '1C03 DV0E0
+# Contract # = '1LJO g2JC0
 import mibian
 
-c = mibian.BS([6.54, 6, .001, 64], callPrice= .78)
+c = mibian.BS([12.6775, 12.7000, .001, 5], callPrice= .78)
 print('Call Vol: ' + str(c.impliedVolatility))
 print()
 
