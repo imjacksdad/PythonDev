@@ -29,9 +29,15 @@ print("d4 =", d4)
 d5 = today.strftime("%Y%m%d")
 print("d5 =", d5)
 
-
-#pass the value of d4 to the calc_date funtion
+#pass the value of d4 to the calc_date funtion in another file
 calc_dates.calc_dates(d4)
 #this will call the file.function
 
+##############################
+import datetime
 
+x = datetime.datetime.now()
+
+print(x.year)
+print(x.strftime("%A"))
+print(x.strftime("%a"))

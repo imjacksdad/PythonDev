@@ -6,7 +6,8 @@ import datetime
     
 # using now() to get current time 
 current_time = datetime.datetime.now() 
-    
+
+print(current_time);
 # Printing attributes of now(). 
 print ("The attributes of now() are : ") 
     
